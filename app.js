@@ -1,5 +1,6 @@
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors");
 const app = express();
 const PORT = 3000;
 const VERCEL = true;
@@ -53,9 +54,8 @@ app.get("/welcome/:id", (req, res) => {
 app.get("/about", (req, res) => {
 	res.status(200).json({
 		status: "success",
-		message: "به توضیحات ای پی ای  نود جی اس خوش آمدید🌹",
-		description:
-			"در این برنامه علاوه بر تعدادی ای پی ای ساده جهت آشنایی با نود جی اس، به بررسی فرآیند های بلاک کننده و غیر بلاک ننده ایونت لوچ می پردازیم",
+		message: "به درباره خوش آمدید🔥",
+		description: "توضیح تفاوت بلاک کننده و غیر بلاک کننده",
 		routes: [
 			{ path: "/", description: "روت اول برنامه، کار خاصی نمی کند." },
 			{ path: "/welcome", description: "پیغام خوش آمدگویی ساده با فرمت JSON" },
