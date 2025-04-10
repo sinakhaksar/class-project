@@ -1,5 +1,4 @@
-const express = require("express");
-const morgan = require("morgan");
+const express = require("express");const morgan = require("morgan");
 const cors = require("cors");
 const app = express();
 const PORT = 3000;
@@ -54,19 +53,18 @@ app.get("/welcome/:id", (req, res) => {
 app.get("/about", (req, res) => {
 	res.status(200).json({
 		status: "success",
-		message: "به درباره خوش آمدید🔥",
+		message: "به صفحه اطلاعات خوش آمدید🔥",
 		description: "توضیح تفاوت بلاک کننده و غیر بلاک کننده",
 		routes: [
 			{ path: "/", description: "روت اول برنامه، کار خاصی نمی کند." },
-			{ path: "/welcome", description: "پیغام خوش آمدگویی ساده با فرمت JSON" },
+			{ path: "/welcome", description: "پیغام خوش آمدگویی با فرمت JSON" },
 			{
 				path: "/welcome/:id",
-				description:
-					"پیغام خوش آمدگویی ساده با فرمت اچ تی ام ال با قابلیت عوض کردن تگ",
+				description: "پیغام خوش آمدگویی با قابلیت عوض کردن تگHTML",
 			},
-			{ path: "/about", description: "توضیح ای پی ای های مختلف برنامه" },
-			{ path: "/user/:id", description: "نمایش ورودی کاربر " },
-			{ path: "/number/:number", description: "محاسبه مربع عدد ورودی کاربر" },
+			{ path: "/about", description: "توضیح APIs" },
+			{ path: "/user/:id", description: "نمایش ورودی کاربر" },
+			{ path: "/number/:number", description: "محاسبه مربع عدد" },
 			{
 				path: "/number/:number/power/:power",
 				description: "محاسبه توان دلخواه عدد",
